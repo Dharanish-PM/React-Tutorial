@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+//CSS
+import './index.css';
+
 // stateless functional component
 // always return JSX
 
@@ -17,11 +20,36 @@ import ReactDOM from 'react-dom'
 //Nested coponents,reat dev tools==> person and message
 function Booklist(){
   return (
-    <section>
-      this is a booklist
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
     </section>
 
   );
 }
 
-ReactDOM.render(<Greeting/>,document.getElementById('root'));
+const Book = () => {
+  return (
+    <article className='book'>
+      <IMage />
+      <Title />
+      <Author />
+    </article>
+  );
+  
+};
+
+const IMage = () => {
+  return (
+    <img src="https://images-eu.ssl-images-amazon.com/images/I/51TehdI7m3L._AC_SX184_.jpg" alt="" srcset="" />
+
+  );
+};
+
+const Title=()=> <h1>I love You</h1>
+const Author=()=> <h4>Amilia</h4>
+
+ReactDOM.render(<Booklist/>,document.getElementById('root'));
