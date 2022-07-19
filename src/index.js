@@ -31,27 +31,23 @@ function Booklist(){
   );
 }
 
+const Author='Amelia'
 const Book = () => {
+  const title='I love You to the moon and backsss'
   return (
     <article className='book'>
-      <IMage />
-      <Title />
-      <Author />
+       <img src="https://images-eu.ssl-images-amazon.com/images/I/51TehdI7m3L._AC_SX184_.jpg" alt="" srcset="" />
+      <h1>{title}</h1>
+
+      
+      <h4>{Author.toUpperCase()}</h4>
+      {/* <h3>{ let x=5}</h3>  ==> not possible only returning stuffs can be in here not statements*/}
+      <h3>{ 6+6}</h3>
     </article>
   );
   
 };
 
-const IMage = () => {
-  return (
-    <img src="https://images-eu.ssl-images-amazon.com/images/I/51TehdI7m3L._AC_SX184_.jpg" alt="" srcset="" />
 
-  );
-};
-
-const Title = () => <h1>I love You</h1>
-
-//we enter into javascript from jsc by using {}. After enterin we use objects to communicated hence we use {{}} to specfy the contents
-const Author=()=> <h4 style={{color:'#617d98',fontSize:'0.75rem',marginTop:'0.25rem'}}>Amilia</h4>
 
 ReactDOM.render(<Booklist/>,document.getElementById('root'));
