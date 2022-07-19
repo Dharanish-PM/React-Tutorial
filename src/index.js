@@ -14,26 +14,14 @@ import ReactDOM from 'react-dom'
 // formatting
 
 
-//Nested coponents,reat tools
-function Greeting(){
+//Nested coponents,reat dev tools==> person and message
+function Booklist(){
   return (
-    <React.Fragment>
-      <div>
-        <Person />
-        <Message />
-        
-        <h2>helllo</h2>
-        <img src="" alt="" />
-      </div>
-
-    </React.Fragment>
+    <section>
+      this is a booklist
+    </section>
 
   );
 }
-
-const Person = () => {
-  return (<h2>First message</h2>)
-}
-const Message = ()=> <h1>Secind Message</h1>
 
 ReactDOM.render(<Greeting/>,document.getElementById('root'));
