@@ -49,7 +49,9 @@ const IMage = () => {
   );
 };
 
-const Title=()=> <h1>I love You</h1>
-const Author=()=> <h4>Amilia</h4>
+const Title = () => <h1>I love You</h1>
+
+//we enter into javascript from jsc by using {}. After enterin we use objects to communicated hence we use {{}} to specfy the contents
+const Author=()=> <h4 style={{color:'#617d98',fontSize:'0.75rem',marginTop:'0.25rem'}}>Amilia</h4>
 
 ReactDOM.render(<Booklist/>,document.getElementById('root'));
