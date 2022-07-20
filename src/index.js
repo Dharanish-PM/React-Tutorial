@@ -21,21 +21,16 @@ const Books = [
 ];
 
 
-/*React wont render array of obejects*/ 
-const names = ['a', 'dfb0', 'dsv'];
-
-const newNames = names.map((name) => {
-  return <h1>{ name}</h1>
-})
 
 function Booklist(){
   return (
     <section className='booklist'>
-      {/* { Books}==>NOt possible */} 
-      {names}
-      {newNames}
-      
-      
+      {Books.map((book) => {
+        {/* const { img, title, author } = book; */}
+        return (
+          <Book book={ book} />
+        )
+      })}
     
     </section>
   );
@@ -43,9 +38,10 @@ function Booklist(){
 
 
 const Book = (props) => {
+   console.log(props)
 
-  const { img, title, Author } = props;
-  console.log(props)
+  const { img, title, Author } = props.book;
+ 
   return (
     <article className='book'>
        <img src={img} alt="" />
