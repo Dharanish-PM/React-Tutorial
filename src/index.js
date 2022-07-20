@@ -18,25 +18,33 @@ const firstbook = {
 function Booklist(){
   return (
     <section className='booklist'>
-      <Book img={firstbook.img} title={firstbook.title} Author={firstbook.Author } />
-      <Book  />
+      <Book img={firstbook.img} title={firstbook.title} Author={firstbook.Author}>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt in incidunt placeat quis quam necessitatibus expedita dolorum laudantium fuga?</p>
+
+      </Book>
+      
+
+      <Book img={firstbook.img} title={firstbook.title} Author={firstbook.Author}  />
     
     </section>
-
   );
 }
 
 
-const Book = (props) => {
-  console.log(props);
+const Book = (props) => {/*const Book = ({img, title, Author })*/
+
+  const { img, title, Author } = props;
+  console.log(props)/*You get the pararagraph element also in props in name of children*/ 
+  // const { img, title, Author,children } = props;
+  
  
   return (
     <article className='book'>
-       <img src={props.img} alt="" />
-      <h1>{props.title}</h1>
-      <h4>{props.Author}</h4>
-
-
+       <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{Author}</h4>
+      { props.children}
 
       {/* <p>{ props.job}</p> */}
       {/* <p>{ props.name}</p> */}
