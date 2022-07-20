@@ -8,11 +8,13 @@ import './index.css';
 
 const Books = [
   {
+    id:1,
     img: 'https://images-eu.ssl-images-amazon.com/images/I/51TehdI7m3L._AC_SX184_.jpg',
     title: 'I love You to the moon and backsss',
     Author: 'Amelia'
   },
   {
+    id:2,
     img: 'https://images-eu.ssl-images-amazon.com/images/I/51TehdI7m3L._AC_SX184_.jpg',
     title: 'I love You to the moon and backsss',
     Author: 'Amelia'
@@ -28,7 +30,7 @@ function Booklist(){
       {Books.map((book) => {
         {/* const { img, title, author } = book; */}
         return (
-          <Book book={ book} />
+          <Book key={book.id} {...book} />
         )
       })}
     
@@ -40,10 +42,11 @@ function Booklist(){
 const Book = (props) => {
    console.log(props)
 
-  const { img, title, Author } = props.book;
+  const { img, title, Author } = props;
  
   return (
     <article className='book'>
+    
        <img src={img} alt="" />
       <h1>{title}</h1>
       <h4>{Author}</h4>
